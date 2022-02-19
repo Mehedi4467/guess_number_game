@@ -57,9 +57,11 @@ const gameJudge = (you, computer) =>{
         computerScore ++;
         document.getElementById('computer-score').innerText = computerScore;
     }
-
-
+    // update score
+    computerShow.innerText = computer;
+    youShow.innerText = you;
    
+    // game count 0
     if(countNumber == 0 && computerScore > yourScore){
         document.getElementById('win-status').innerText = 'You lost, the computer won';
         document.getElementById('play-button').disabled = true;
@@ -79,10 +81,8 @@ const gameJudge = (you, computer) =>{
             document.getElementById('reset-button').disabled = false;
 
     }
+
     
-    console.log(computerScore,yourScore,countNumber );
-    computerShow.innerText = computer;
-    youShow.innerText = you;
 }
 
 // play button 
