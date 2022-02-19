@@ -16,6 +16,7 @@
     <header class="contaner">
         <h2 class="text-center fw-bolder text-primary my-5">Guess the number and play with the computer</h2>
 
+       <h2 id="win-status" class="text-center text-white bg-warning"></h2>
     </header>
     <main class="container ">
         <section class="mt-5">
@@ -24,33 +25,49 @@
                <div class="col-12 col-sm-8">
                    
 
-                <div class="row gap-4 justify-content-center">
+                <div class="row gap-4 justify-content-center align-items-center">
                     <div class="col-12 col-sm-4 text-center bg-primary rounded text-white p-3 d-flex align-items-center justify-content-center">
                         <div>
-                            <p class="fw-bold">You Score</p>
-                        <h3>5</h3>
+                            <p class="fw-bold">Your Score</p>
+                        <h3 id="your-score">0</h3>
                         </div>
                     </div>
+                    <div id="countShow" class="d-flex justify-content-center align-items-center fs-4 text-white">0</div>
                     <div class="col-12 col-sm-4 text-center bg-warning rounded text-white p-3 d-flex align-items-center justify-content-center">
                         <div>
                             <p class="fw-bold">Computer Score</p>
-                        <h3>5</h3>
+                        <h3 id="computer-score">0</h3>
                         </div>
                     </div>
                 </div>
 
                 <!-- number input area  -->
-                <div class="mt-2">
+                <div class="mt-2 container">
                     
                         <div class="col-auto">
-                        <h2 class="text-center text-warning my-4">Congratulation Your Win</h2>
+                        <h2 id="win" class="text-center text-warning my-4"></h2>
+                        
                         </div>
-                        <div class="col-auto">
+                        
+                        <div id="displayBlock">
+                            <div  class="col-auto d-flex justify-content-center ">
+                                <div class="d-flex gap-3">
+                                <input id="count-input" type="text" class="form-control"  placeholder="How Many Time You Play">
+                                <button id="count-button" class="btn btn-primary ">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto d-flex justify-content-center">
+                            
+                            <div class="col-9">
+                            <p id="error-massage" class="text-warning text-center"></p>
                           <label for="your-input" class="visually-hidden">Password</label>
                           <input type="text" class="form-control" id="your-input" placeholder="Input Your Number">
+                            </div>
                         </div>
-                        <div class="col-auto">
-                          <button  class="btn btn-primary mt-3">Play</button>
+                        <div class="col-auto d-flex justify-content-center gap-4">
+                          <button id="play-button" class="btn btn-primary mt-3" disabled>Play</button>
+                          <button id="reset-button" class="btn btn-primary mt-3" disabled>Play again</button>
                         </div>
                      
                 </div>
@@ -62,14 +79,14 @@
                    <div class="bg-secondary text-white p-3 d-flex align-items-center justify-content-center">
                        <div class="text-center">
                         <h5>Computer Number</h5>
-                        <h4>3</h4>
+                        <h4 id="computer-show">0</h4>
                     </div>
                    </div>
 
                    <div class="bg-info text-white p-3 d-flex align-items-center justify-content-center mt-5">
                     <div class="text-center">
                      <h5>Your Number</h5>
-                     <h4>3</h4>
+                     <h4 id="you-show">0</h4>
                  </div>
                 </div>
                </div>
